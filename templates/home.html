@@ -10,16 +10,17 @@
             <form method="post" action="/">
                 <label for="city">City: </label>
                 <input type="text" id="city" name="city" class="city">
-                <button type="submit" class="btn btn-success">Show weather</button>
+                <button type="submit" class="btn btn-success mt-2">Show weather</button>
             </form>
         {% if data %}
+        <p>Weather for {{ data.name }}</p>
         <p>Temperature: {{ data.temp }}</p>
         <p>Humidity: {{ data.humidity }}</p>
         <p>Cloudy : {{ data.cloud }}</p>
         <p>Wind: {{ data.wind }}</p>
         <p>Pressure: {{ data.pressure }}</p>
-        <p>Chance for rain: {{ data.rain }}</p>
-        <p>Chance for snow: {{ data.snow }}</p>
+        <p>Chance for rain: {{ data.rain }}%</p>
+        <p>Chance for snow: {{ data.snow }}%</p>
         {% endif %}
     </div>
 </body>
